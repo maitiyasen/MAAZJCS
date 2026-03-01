@@ -1,16 +1,13 @@
 {
+    "interface_version": 2,
+    "contact": "CONTACT",
+    "license": "LICENSE",
+    "name": "M9A",
     "controller": [
         {
-            "name": "安卓端",
+            "name": "ADB",
+            "label": "模拟器",
             "type": "Adb"
-        },
-        {
-            "name": "桌面端",
-            "type": "Win32",
-            "win32": {
-                "class_regex": ".*",
-                "window_regex": "Visual Studio"
-            }
         }
     ],
     "resource": [
@@ -19,66 +16,165 @@
             "path": [
                 "{PROJECT_DIR}/resource"
             ]
-        },
-        {
-            "name": "B 服",
-            "path": [
-                "{PROJECT_DIR}/resource",
-                "{PROJECT_DIR}/resource_bilibili"
-            ]
         }
     ],
-    "agent_demo": {
+    "agent": {
         "child_exec": "python",
         "child_args": [
-            "{PROJECT_DIR}/agent/main.py"
+            "-u",
+            "./../agent/main.py"
         ]
     },
-    "task": [
-        {
-            "name": "普通任务",
-            "entry": "MyTask1"
-        },
-        {
-            "name": "选项任务",
-            "entry": "MyTask2",
-            "option": [
-                "任务选项1"
-            ]
-        },
-        {
-            "name": "参数任务",
-            "entry": "MyTask3",
-            "option": [
-                "任务选项1"
-            ],
-            "pipeline_override": {}
-        },
-        {
-            "name": "带Custom的任务",
-            "entry": "MyTask4"
-        }
-    ],
     "option": {
-        "任务选项1": {
+        "选择是否领取小推车": {
+            "type": "checkbox",
+            "label": "领取小推车",
+            "description": "别选了",
+            "default_case": [
+                "领取小推车name"
+            ],
             "cases": [
                 {
-                    "name": "文本1",
+                    "name": "领取小推车name",
+                    "label": "领取小推车",
+                    "description": "开表示领取小推车",
                     "pipeline_override": {
-                        "OcrTask": {
-                            "text": "文本1"
+                        "领取小推车": {
+                            "enabled": true
                         }
                     }
-                },
+                }
+            ]
+        },
+        "选择是否领取经验球": {
+            "type": "checkbox",
+            "label": "领取经验球",
+            "description": "别选了",
+            "default_case": [
+                "领取经验球"
+            ],
+            "cases": [
                 {
-                    "name": "文本2",
+                    "name": "领取经验球",
+                    "label": "领取经验球",
+                    "description": "开表示领取经验球",
                     "pipeline_override": {
-                        "OcrTask": {
-                            "text": "文本2"
+                        "领取经验球": {
+                            "enabled": true
+                        }
+                    }
+                }
+            ]
+        },
+        "选择是否升级装备": {
+            "type": "checkbox",
+            "label": "升级装备",
+            "description": "别选了",
+            "default_case": [
+                "升级装备"
+            ],
+            "cases": [
+                {
+                    "name": "升级装备",
+                    "label": "升级装备",
+                    "description": "开表示升级装备",
+                    "pipeline_override": {
+                        "升级装备": {
+                            "enabled": true
+                        }
+                    }
+                }
+            ]
+        },
+        "选择是否升级技能": {
+            "type": "checkbox",
+            "label": "一键升级技能等级",
+            "description": "别选了",
+            "default_case": [
+                "升级"
+            ],
+            "cases": [
+                {
+                    "name": "升级技能",
+                    "label": "一键升级技能等级",
+                    "description": "开表示升级装备",
+                    "pipeline_override": {
+                        "一键升级技能等级": {
+                            "enabled": true
                         }
                     }
                 }
             ]
         }
-    }
+    },
+    "task": [
+        {
+            "name": "启动游戏",
+            "entry": "启动游戏",
+            "controller": [
+                "ADB"
+            ],
+            "default_check": true
+        },
+        {
+            "name": "等待",
+            "entry": "等待",
+            "controller": [
+                "ADB"
+            ],
+            "default_check": true
+        },
+        {
+            "name": "识别进入",
+            "entry": "识别进入",
+            "controller": [
+                "ADB"
+            ],
+            "default_check": true
+        },
+        {
+            "name": "点击左下",
+            "entry": "点击左下",
+            "controller": [
+                "ADB"
+            ],
+            "default_check": true
+        },
+        {
+            "name": "点击任意键进入游戏",
+            "entry": "点击任意键进入游戏",
+            "controller": [
+                "ADB"
+            ],
+            "default_check": true
+        },
+        {
+            "name": "小推车",
+            "entry": "领取小推车",
+            "option": [
+                "选择是否领取小推车"
+            ]
+        },
+        {
+            "name": "经验球",
+            "entry": "领取经验球",
+            "option": [
+                "选择是否领取经验球"
+            ]
+        },
+        {
+            "name": "升级装备",
+            "entry": "升级装备",
+            "option": [
+                "选择是否升级装备"
+            ]
+        },
+        {
+            "name": "升级技能",
+            "entry": "一键升级技能等级",
+            "option": [
+                "选择是否升级技能"
+            ]
+        }
+    ]
 }
