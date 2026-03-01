@@ -1,0 +1,757 @@
+{
+    "$__mpe_config_新建Pipeline1": {
+        "$__mpe_code": {
+            "prefix": "",
+            "filePath": "C:\\Users\\xieza\\Desktop\\MAA\\assets\\resource\\pipeline\\ipeline1.json",
+            "lastSyncTime": 1772369490407,
+            "savedViewport": {
+                "x": 3589,
+                "y": 1028,
+                "zoom": 0.92
+            },
+            "filename": "新建Pipeline1",
+            "version": "v1.2.0"
+        }
+    },
+    "启动游戏": {
+        "action": {
+            "type": "StartApp",
+            "param": {
+                "package": "com.leiting.zjcs"
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": -4681,
+                "y": -1057
+            }
+        },
+        "next": [
+            "等待"
+        ]
+    },
+    "等待": {
+        "pre_delay": 4000,
+        "$__mpe_code": {
+            "position": {
+                "x": -4366,
+                "y": -1072
+            }
+        },
+        "next": [
+            "识别进入",
+            "进入游戏家园界面"
+        ]
+    },
+    "识别进入": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "今日不再提示"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "max_hit": 50,
+        "$__mpe_code": {
+            "position": {
+                "x": -4066,
+                "y": -1025
+            }
+        },
+        "next": [
+            "点击左下"
+        ]
+    },
+    "点击左下": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    49,
+                    1184,
+                    58,
+                    47
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": -3789,
+                "y": -1099
+            }
+        },
+        "next": [
+            "点击任意键进入游戏"
+        ]
+    },
+    "点击任意键进入游戏": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "开始游戏"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    282,
+                    963,
+                    87,
+                    57
+                ]
+            }
+        },
+        "max_hit": 50,
+        "$__mpe_code": {
+            "position": {
+                "x": -3559,
+                "y": -860
+            }
+        },
+        "next": [
+            "进入游戏家园界面"
+        ]
+    },
+    "进入游戏家园界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "家园界面识别.png"
+                ]
+            }
+        },
+        "next": [
+            "[JumpBack]领取经验球",
+            "[JumpBack]领取小推车",
+            "[JumpBack]升级装备",
+            "[JumpBack]一键升级技能等级"
+        ]
+    },
+    "领取经验球": {
+        "enabled": true,
+        "max_hit": 1,
+        "$__mpe_code": {
+            "position": {
+                "x": -2703,
+                "y": -1034
+            }
+        },
+        "pre_delay": 200,
+        "next": [
+            "滑动到最右边"
+        ]
+    },
+    "滑动到最右边": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    509,
+                    412,
+                    26,
+                    44
+                ],
+                "end": [
+                    [
+                        55,
+                        487,
+                        35,
+                        31
+                    ]
+                ],
+                "duration": 500
+            }
+        },
+        "repeat": 4,
+        "repeat_delay": 600,
+        "max_hit": 1,
+        "$__mpe_code": {
+            "position": {
+                "x": -1334,
+                "y": -1283
+            }
+        },
+        "next": [
+            "点击床领取经验",
+            "什么的都没有结束"
+        ]
+    },
+    "点击床领取经验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "经验球.png"
+                ]
+            }
+        },
+        "pre_delay": 200,
+        "max_hit": 1,
+        "$__mpe_code": {
+            "position": {
+                "x": -440,
+                "y": -1437
+            }
+        },
+        "next": [
+            "新建节点45"
+        ]
+    },
+    "领取小推车": {
+        "enabled": true,
+        "max_hit": 1,
+        "$__mpe_code": {
+            "position": {
+                "x": -2682,
+                "y": -704
+            }
+        },
+        "pre_delay": 200,
+        "next": [
+            "向左滑"
+        ]
+    },
+    "小推车小按钮": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "小推车小按钮.png",
+                    "小推车.png"
+                ]
+            }
+        },
+        "pre_delay": 200,
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": -502,
+                "y": -870
+            }
+        },
+        "next": [
+            "点击领取小推车"
+        ]
+    },
+    "点击领取小推车": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    325,
+                    835,
+                    25,
+                    20
+                ]
+            }
+        },
+        "pre_delay": 200,
+        "$__mpe_code": {
+            "position": {
+                "x": -189,
+                "y": -877
+            }
+        },
+        "next": [
+            "点一下返回家园界面"
+        ]
+    },
+    "点一下返回家园界面": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    258,
+                    186,
+                    42,
+                    37
+                ]
+            }
+        },
+        "pre_delay": 200,
+        "$__mpe_code": {
+            "position": {
+                "x": 283,
+                "y": -880
+            }
+        }
+    },
+    "什么的都没有结束": {
+        "$__mpe_code": {
+            "position": {
+                "x": -446,
+                "y": -1138
+            }
+        }
+    },
+    "向左滑": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    514,
+                    718,
+                    26,
+                    35
+                ],
+                "end": [
+                    [
+                        67,
+                        723,
+                        28,
+                        37
+                    ]
+                ]
+            }
+        },
+        "repeat": 4,
+        "repeat_delay": 800,
+        "max_hit": 1,
+        "$__mpe_code": {
+            "position": {
+                "x": -1329,
+                "y": -807
+            }
+        },
+        "next": [
+            "小推车小按钮",
+            "新建节点46"
+        ]
+    },
+    "升级装备": {
+        "enabled": true,
+        "max_hit": 1,
+        "$__mpe_code": {
+            "position": {
+                "x": -2663,
+                "y": -369
+            }
+        },
+        "pre_delay": 200,
+        "next": [
+            "进入人物界面",
+            "返回_副本12"
+        ]
+    },
+    "一键升级技能等级": {
+        "enabled": true,
+        "max_hit": 1,
+        "$__mpe_code": {
+            "position": {
+                "x": -2645,
+                "y": 18
+            }
+        },
+        "pre_delay": 200,
+        "next": [
+            "进入人物",
+            "返回"
+        ]
+    },
+    "进入人物界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "人物界面.png"
+                ]
+            }
+        },
+        "pre_delay": 200,
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "max_hit": 5,
+        "$__mpe_code": {
+            "position": {
+                "x": -1287,
+                "y": -468
+            }
+        },
+        "next": [
+            "[JumpBack]武器",
+            "[JumpBack]武器2",
+            "[JumpBack]武器3",
+            "[JumpBack]武器4",
+            "左下角返回_副本9_副本11"
+        ]
+    },
+    "武器": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    63,
+                    369,
+                    54,
+                    52
+                ]
+            }
+        },
+        "max_hit": 1,
+        "$__mpe_code": {
+            "position": {
+                "x": -533,
+                "y": -425
+            }
+        },
+        "pre_delay": 200,
+        "next": [
+            "培养"
+        ]
+    },
+    "培养": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "培养"
+                ]
+            }
+        },
+        "pre_delay": 200,
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": -66,
+                "y": -73
+            }
+        },
+        "next": [
+            "新建节点42"
+        ]
+    },
+    "新建节点42": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    325,
+                    1070,
+                    78,
+                    34
+                ]
+            }
+        },
+        "pre_delay": 200,
+        "repeat": 2,
+        "$__mpe_code": {
+            "position": {
+                "x": 324,
+                "y": -140
+            }
+        },
+        "next": [
+            "左下角返回"
+        ]
+    },
+    "武器2": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    584,
+                    332,
+                    70,
+                    57
+                ]
+            }
+        },
+        "pre_delay": 200,
+        "max_hit": 1,
+        "$__mpe_code": {
+            "position": {
+                "x": -503,
+                "y": -179
+            }
+        },
+        "next": [
+            "培养"
+        ]
+    },
+    "左下角返回": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    45,
+                    1195,
+                    56,
+                    28
+                ]
+            }
+        },
+        "pre_delay": 200,
+        "$__mpe_code": {
+            "position": {
+                "x": 833,
+                "y": -118
+            }
+        }
+    },
+    "武器3": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    630,
+                    467,
+                    49,
+                    62
+                ]
+            }
+        },
+        "pre_delay": 200,
+        "max_hit": 1,
+        "$__mpe_code": {
+            "position": {
+                "x": -483,
+                "y": 34
+            }
+        },
+        "next": [
+            "培养"
+        ]
+    },
+    "武器4": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    596,
+                    600,
+                    43,
+                    79
+                ]
+            }
+        },
+        "pre_delay": 200,
+        "max_hit": 1,
+        "$__mpe_code": {
+            "position": {
+                "x": -464,
+                "y": 258
+            }
+        },
+        "next": [
+            "培养"
+        ]
+    },
+    "回界面": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    336,
+                    1176,
+                    49,
+                    54
+                ]
+            }
+        },
+        "pre_delay": 200,
+        "$__mpe_code": {
+            "position": {
+                "x": 135,
+                "y": 504
+            }
+        }
+    },
+    "新建节点45": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    109,
+                    596,
+                    27,
+                    33
+                ]
+            }
+        },
+        "pre_delay": 200,
+        "$__mpe_code": {
+            "position": {
+                "x": -34,
+                "y": -1382
+            }
+        }
+    },
+    "pre_delay": 200,
+    "新建节点46": {
+        "$__mpe_code": {
+            "position": {
+                "x": -519,
+                "y": -586
+            }
+        }
+    },
+    "进入人物": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "人物界面.png"
+                ]
+            }
+        },
+        "pre_delay": 200,
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": -1798,
+                "y": -52
+            }
+        },
+        "next": [
+            "新建节点48"
+        ]
+    },
+    "返回": {
+        "max_hit": 1,
+        "$__mpe_code": {
+            "position": {
+                "x": -1791,
+                "y": 160
+            }
+        }
+    },
+    "pre_delay": 200,
+    "新建节点48": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    222,
+                    738,
+                    34,
+                    36
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": -1520,
+                "y": -29
+            }
+        },
+        "next": [
+            "新建节点49"
+        ]
+    },
+    "新建节点49": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    509,
+                    600,
+                    24,
+                    32
+                ]
+            }
+        },
+        "pre_delay": 200,
+        "$__mpe_code": {
+            "position": {
+                "x": -1273,
+                "y": -18
+            }
+        },
+        "next": [
+            "左下角返回_副本9"
+        ]
+    },
+    "左下角返回_副本9": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    45,
+                    1195,
+                    56,
+                    28
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": -1285,
+                "y": 215
+            }
+        },
+        "next": [
+            "回界面_副本10"
+        ]
+    },
+    "回界面_副本10": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    336,
+                    1176,
+                    49,
+                    54
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": -1226,
+                "y": 403
+            }
+        }
+    },
+    "左下角返回_副本9_副本11": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    45,
+                    1195,
+                    56,
+                    28
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": -461,
+                "y": 489
+            }
+        },
+        "pre_delay": 200,
+        "next": [
+            "回界面"
+        ]
+    },
+    "返回_副本12": {
+        "max_hit": 1,
+        "$__mpe_code": {
+            "position": {
+                "x": -1416,
+                "y": -260
+            }
+        }
+    }
+}
