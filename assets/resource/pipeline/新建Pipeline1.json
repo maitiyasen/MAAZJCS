@@ -1,18 +1,4 @@
 {
-    "$__mpe_config_新建Pipeline1": {
-        "$__mpe_code": {
-            "prefix": "",
-            "filePath": "C:\\Users\\xieza\\Desktop\\MAA\\assets\\resource\\pipeline\\ipeline1.json",
-            "lastSyncTime": 1772369490407,
-            "savedViewport": {
-                "x": 3589,
-                "y": 1028,
-                "zoom": 0.92
-            },
-            "filename": "新建Pipeline1",
-            "version": "v1.2.0"
-        }
-    },
     "启动游戏": {
         "action": {
             "type": "StartApp",
@@ -635,7 +621,7 @@
             }
         }
     },
-    "pre_delay": 200,
+   
     "新建节点48": {
         "action": {
             "type": "Click",
