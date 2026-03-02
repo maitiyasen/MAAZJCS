@@ -31,11 +31,11 @@
             "label": "领取小推车",
             "description": "别选了",
             "default_case": [
-                "领取小推车name"
+                "领取"
             ],
             "cases": [
                 {
-                    "name": "领取小推车name",
+                    "name": "领取",
                     "label": "领取小推车",
                     "description": "开表示领取小推车",
                     "pipeline_override": {
@@ -95,7 +95,7 @@
             ],
             "cases": [
                 {
-                    "name": "升级技能",
+                    "name": "升级",
                     "label": "一键升级技能等级",
                     "description": "开表示升级装备",
                     "pipeline_override": {
