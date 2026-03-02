@@ -1,18 +1,5 @@
 {
-    "$__mpe_config_新建Pipeline1": {
-        "$__mpe_code": {
-            "prefix"MAAZJCS: "",
-            "filePath": "C:\\Users\\xieza\\Desktop\\MAA\\assets\\resource\\pipeline\\ipeline1.json",
-            "lastSyncTime": 1772432996557,
-            "savedViewport": {
-                "x": 2714,
-                "y": 415,
-                "zoom": 0.46
-            },
-            "filename": "新建Pipeline1",
-            "version": "v1.2.0"
-        }
-    },
+
     "素材秘境次数购买": {
         "enabled": true,
         "max_hit": 1,
