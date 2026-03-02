@@ -1,4 +1,657 @@
 {
+    "$__mpe_config_新建Pipeline1": {
+        "$__mpe_code": {
+            "prefix"MAAZJCS: "",
+            "filePath": "C:\\Users\\xieza\\Desktop\\MAA\\assets\\resource\\pipeline\\ipeline1.json",
+            "lastSyncTime": 1772432996557,
+            "savedViewport": {
+                "x": 2714,
+                "y": 415,
+                "zoom": 0.46
+            },
+            "filename": "新建Pipeline1",
+            "version": "v1.2.0"
+        }
+    },
+    "素材秘境次数购买": {
+        "enabled": true,
+        "max_hit": 1,
+        "post_delay": 500,
+        "$__mpe_code": {
+            "position": {
+                "x": -3076,
+                "y": -74
+            }
+        },
+        "next": [
+            "点击笔记"
+        ]
+    },
+    "点击笔记": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "笔记.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    207,
+                    1220,
+                    21,
+                    23
+                ]
+            }
+        },
+        "post_delay": 500,
+        "$__mpe_code": {
+            "position": {
+                "x": -3432,
+                "y": 187
+            }
+        },
+        "next": [
+            "素材秘境"
+        ]
+    },
+    "素材秘境": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "素材秘境"
+                ]
+            }
+        },
+        "post_delay": 500,
+        "$__mpe_code": {
+            "position": {
+                "x": -3284,
+                "y": 737
+            }
+        },
+        "next": [
+            "点击素材秘境"
+        ]
+    },
+    "点击素材秘境": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    152,
+                    1003,
+                    60,
+                    20
+                ]
+            }
+        },
+        "post_delay": 500,
+        "$__mpe_code": {
+            "position": {
+                "x": -3031,
+                "y": 478
+            }
+        },
+        "next": [
+            "[JumpBack]找矿洞",
+            "[JumpBack]找矿洞_副本1",
+            "[JumpBack]找矿洞_副本1_副本3",
+            "[JumpBack]找矿洞_副本1_副本4",
+            "完成"
+        ]
+    },
+    "找矿洞": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "铁石矿洞"
+                ]
+            }
+        },
+        "post_delay": 200,
+        "enabled": true,
+        "max_hit": 1,
+        "$__mpe_code": {
+            "position": {
+                "x": -2557,
+                "y": 234
+            }
+        },
+        "next": [
+            "点击铁矿石矿洞"
+        ]
+    },
+    "点击铁矿石矿洞": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    122,
+                    323,
+                    63,
+                    36
+                ]
+            }
+        },
+        "post_delay": 500,
+        "$__mpe_code": {
+            "position": {
+                "x": -2245,
+                "y": 212
+            }
+        },
+        "next": [
+            "点加号"
+        ]
+    },
+    "点加号": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "加号.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_delay": 500,
+        "$__mpe_code": {
+            "position": {
+                "x": -1830,
+                "y": 349
+            }
+        },
+        "next": [
+            "点击数量"
+        ]
+    },
+    "点击数量": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "取消"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    535,
+                    701,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_delay": 300,
+        "$__mpe_code": {
+            "position": {
+                "x": -1559,
+                "y": 427
+            }
+        },
+        "next": [
+            "点击购买"
+        ]
+    },
+    "点击购买": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    456,
+                    828,
+                    8,
+                    7
+                ]
+            }
+        },
+        "post_delay": 300,
+        "$__mpe_code": {
+            "position": {
+                "x": -1312,
+                "y": 560
+            }
+        },
+        "next": [
+            "返回2"
+        ]
+    },
+    "返回2": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    53,
+                    1211,
+                    31,
+                    18
+                ]
+            }
+        },
+        "post_delay": 500,
+        "$__mpe_code": {
+            "position": {
+                "x": -1048,
+                "y": 579
+            }
+        }
+    },
+    "找矿洞_副本1": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "黄金矿洞"
+                ]
+            }
+        },
+        "post_delay": 200,
+        "enabled": true,
+        "max_hit": 1,
+        "$__mpe_code": {
+            "position": {
+                "x": -2568,
+                "y": 487
+            }
+        },
+        "next": [
+            "点击铁矿石矿洞_副本5"
+        ]
+    },
+    "武器2": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    584,
+                    332,
+                    70,
+                    57
+                ]
+            }
+        },
+        "max_hit": 1,
+        "$__mpe_code": {
+            "position": {
+                "x": -503,
+                "y": -179
+            }
+        },
+        "next": [
+            "培养"
+        ]
+    },
+    "找矿洞_副本1_副本3": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "怪物洞窟"
+                ]
+            }
+        },
+        "post_delay": 200,
+        "enabled": true,
+        "max_hit": 1,
+        "$__mpe_code": {
+            "position": {
+                "x": -2579,
+                "y": 760
+            }
+        },
+        "next": [
+            "新建节点11"
+        ]
+    },
+    "找矿洞_副本1_副本4": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "砂石矿洞"
+                ]
+            }
+        },
+        "post_delay": 200,
+        "enabled": true,
+        "max_hit": 1,
+        "$__mpe_code": {
+            "position": {
+                "x": -2581,
+                "y": 1011
+            }
+        },
+        "next": [
+            "新建节点13"
+        ]
+    },
+    "点击铁矿石矿洞_副本5": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    546,
+                    243,
+                    23,
+                    26
+                ]
+            }
+        },
+        "post_delay": 500,
+        "$__mpe_code": {
+            "position": {
+                "x": -2226,
+                "y": 459
+            }
+        },
+        "next": [
+            "新建节点24"
+        ]
+    },
+    "武器3": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    630,
+                    467,
+                    49,
+                    62
+                ]
+            }
+        },
+        "max_hit": 1,
+        "$__mpe_code": {
+            "position": {
+                "x": -483,
+                "y": 34
+            }
+        },
+        "next": [
+            "培养"
+        ]
+    },
+    "武器4": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    596,
+                    600,
+                    43,
+                    79
+                ]
+            }
+        },
+        "max_hit": 1,
+        "$__mpe_code": {
+            "position": {
+                "x": -464,
+                "y": 258
+            }
+        },
+        "next": [
+            "培养"
+        ]
+    },
+    "新建节点11": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    166,
+                    810,
+                    35,
+                    23
+                ]
+            }
+        },
+        "post_delay": 500,
+        "$__mpe_code": {
+            "position": {
+                "x": -2272,
+                "y": 699
+            }
+        },
+        "next": [
+            "点加号"
+        ]
+    },
+    "新建节点13": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    546,
+                    243,
+                    23,
+                    26
+                ]
+            }
+        },
+        "post_delay": 500,
+        "$__mpe_code": {
+            "position": {
+                "x": -2251,
+                "y": 993
+            }
+        },
+        "next": [
+            "点加号"
+        ]
+    },
+    "完成": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    63,
+                    1207,
+                    23,
+                    20
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": -2579,
+                "y": 1291
+            }
+        },
+        "next": [
+            "新建节点26"
+        ]
+    },
+    "新建节点24": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    692,
+                    56,
+                    1,
+                    1
+                ]
+            }
+        },
+        "pre_delay": 500,
+        "$__mpe_code": {
+            "position": {
+                "x": -1837,
+                "y": 627
+            }
+        },
+        "next": [
+            "点击数量"
+        ]
+    },
+    "新建节点26": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "家园界面识别.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    359,
+                    1198,
+                    9,
+                    20
+                ]
+            }
+        },
+        "post_delay": 500,
+        "$__mpe_code": {
+            "position": {
+                "x": -2251,
+                "y": 1276
+            }
+        }
+    },
+    "进入聊天界面": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    153,
+                    1068,
+                    19,
+                    14
+                ]
+            }
+        },
+        "post_delay": 400,
+        "pre_delay": 400,
+        "enabled": true,
+        "$__mpe_code": {
+            "position": {
+                "x": -5478,
+                "y": -362
+            }
+        },
+        "next": [
+            "[JumpBack]找危险的魔物",
+            "[JumpBack]找矿",
+            "[JumpBack]新建节点52"
+        ]
+    },
+    "找危险的魔物": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "危险魔物.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "repeat_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": -5134,
+                "y": -387
+            }
+        },
+        "next": [
+            "新建节点30",
+            "新建节点36"
+        ]
+    },
+    "新建节点30": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "确定按钮.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": -4560,
+                "y": -208
+            }
+        }
+    },
+    "新建节点36": {
+        "$__mpe_code": {
+            "position": {
+                "x": -4550,
+                "y": -43
+            }
+        }
+    },
+    "新建节点51": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "两次矿.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": -5585,
+                "y": -41
+            }
+        }
+    },
+    "新建节点52": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    408,
+                    1046,
+                    1,
+                    1
+                ],
+                "end": [
+                    [
+                        408,
+                        496,
+                        14,
+                        14
+                    ]
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": -5123,
+                "y": 62
+            }
+        }
+    },
     "启动游戏": {
         "action": {
             "type": "StartApp",
@@ -26,7 +679,7 @@
         },
         "next": [
             "识别进入",
-            "进入游戏家园界面"
+            "点击任意键进入游戏"
         ]
     },
     "识别进入": {
@@ -42,11 +695,10 @@
             "type": "Click",
             "param": {}
         },
-        "max_hit": 50,
         "$__mpe_code": {
             "position": {
                 "x": -4066,
-                "y": -1025
+                "y": -1128
             }
         },
         "next": [
@@ -65,10 +717,11 @@
                 ]
             }
         },
+        "pre_delay": 200,
         "$__mpe_code": {
             "position": {
-                "x": -3789,
-                "y": -1099
+                "x": -3744,
+                "y": -1138
             }
         },
         "next": [
@@ -95,11 +748,10 @@
                 ]
             }
         },
-        "max_hit": 50,
         "$__mpe_code": {
             "position": {
-                "x": -3559,
-                "y": -860
+                "x": -3371,
+                "y": -1309
             }
         },
         "next": [
@@ -115,23 +767,31 @@
                 ]
             }
         },
+        "$__mpe_code": {
+            "position": {
+                "x": -5754,
+                "y": -636
+            }
+        },
         "next": [
             "[JumpBack]领取经验球",
             "[JumpBack]领取小推车",
             "[JumpBack]升级装备",
-            "[JumpBack]一键升级技能等级"
+            "[JumpBack]一键升级技能等级",
+            "[JumpBack]素材秘境次数购买",
+            "[JumpBack]进入聊天界面"
         ]
     },
     "领取经验球": {
         "enabled": true,
+        "pre_delay": 200,
         "max_hit": 1,
         "$__mpe_code": {
             "position": {
-                "x": -2703,
-                "y": -1034
+                "x": -2498,
+                "y": -1137
             }
         },
-        "pre_delay": 200,
         "next": [
             "滑动到最右边"
         ]
@@ -176,12 +836,12 @@
             "type": "TemplateMatch",
             "param": {
                 "template": [
-                    "经验球.png"
+                    "经验球.png",
+                    "经验球2.png"
                 ]
             }
         },
-        "pre_delay": 200,
-        "max_hit": 1,
+        "pre_delay": 300,
         "$__mpe_code": {
             "position": {
                 "x": -440,
@@ -189,19 +849,19 @@
             }
         },
         "next": [
-            "新建节点45"
+            "点击床"
         ]
     },
     "领取小推车": {
         "enabled": true,
+        "pre_delay": 500,
         "max_hit": 1,
         "$__mpe_code": {
             "position": {
-                "x": -2682,
-                "y": -704
+                "x": -2432,
+                "y": -809
             }
         },
-        "pre_delay": 200,
         "next": [
             "向左滑"
         ]
@@ -216,7 +876,6 @@
                 ]
             }
         },
-        "pre_delay": 200,
         "action": {
             "type": "Click",
             "param": {}
@@ -243,7 +902,6 @@
                 ]
             }
         },
-        "pre_delay": 200,
         "$__mpe_code": {
             "position": {
                 "x": -189,
@@ -266,7 +924,6 @@
                 ]
             }
         },
-        "pre_delay": 200,
         "$__mpe_code": {
             "position": {
                 "x": 283,
@@ -304,7 +961,6 @@
         },
         "repeat": 4,
         "repeat_delay": 800,
-        "max_hit": 1,
         "$__mpe_code": {
             "position": {
                 "x": -1329,
@@ -321,11 +977,10 @@
         "max_hit": 1,
         "$__mpe_code": {
             "position": {
-                "x": -2663,
-                "y": -369
+                "x": -2473,
+                "y": -479
             }
         },
-        "pre_delay": 200,
         "next": [
             "进入人物界面",
             "返回_副本12"
@@ -336,11 +991,10 @@
         "max_hit": 1,
         "$__mpe_code": {
             "position": {
-                "x": -2645,
-                "y": 18
+                "x": -2455,
+                "y": -202
             }
         },
-        "pre_delay": 200,
         "next": [
             "进入人物",
             "返回"
@@ -355,7 +1009,6 @@
                 ]
             }
         },
-        "pre_delay": 200,
         "action": {
             "type": "Click",
             "param": {}
@@ -394,7 +1047,6 @@
                 "y": -425
             }
         },
-        "pre_delay": 200,
         "next": [
             "培养"
         ]
@@ -408,11 +1060,11 @@
                 ]
             }
         },
-        "pre_delay": 200,
         "action": {
             "type": "Click",
             "param": {}
         },
+        "post_delay": 500,
         "$__mpe_code": {
             "position": {
                 "x": -66,
@@ -435,8 +1087,9 @@
                 ]
             }
         },
-        "pre_delay": 200,
         "repeat": 2,
+        "post_delay": 500,
+        "repeat_delay": 200,
         "$__mpe_code": {
             "position": {
                 "x": 324,
@@ -445,30 +1098,6 @@
         },
         "next": [
             "左下角返回"
-        ]
-    },
-    "武器2": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    584,
-                    332,
-                    70,
-                    57
-                ]
-            }
-        },
-        "pre_delay": 200,
-        "max_hit": 1,
-        "$__mpe_code": {
-            "position": {
-                "x": -503,
-                "y": -179
-            }
-        },
-        "next": [
-            "培养"
         ]
     },
     "左下角返回": {
@@ -483,61 +1112,13 @@
                 ]
             }
         },
-        "pre_delay": 200,
+        "post_delay": 500,
         "$__mpe_code": {
             "position": {
                 "x": 833,
                 "y": -118
             }
         }
-    },
-    "武器3": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    630,
-                    467,
-                    49,
-                    62
-                ]
-            }
-        },
-        "pre_delay": 200,
-        "max_hit": 1,
-        "$__mpe_code": {
-            "position": {
-                "x": -483,
-                "y": 34
-            }
-        },
-        "next": [
-            "培养"
-        ]
-    },
-    "武器4": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    596,
-                    600,
-                    43,
-                    79
-                ]
-            }
-        },
-        "pre_delay": 200,
-        "max_hit": 1,
-        "$__mpe_code": {
-            "position": {
-                "x": -464,
-                "y": 258
-            }
-        },
-        "next": [
-            "培养"
-        ]
     },
     "回界面": {
         "action": {
@@ -551,7 +1132,6 @@
                 ]
             }
         },
-        "pre_delay": 200,
         "$__mpe_code": {
             "position": {
                 "x": 135,
@@ -559,19 +1139,19 @@
             }
         }
     },
-    "新建节点45": {
+    "点击床": {
         "action": {
             "type": "Click",
             "param": {
                 "target": [
-                    109,
-                    596,
-                    27,
-                    33
+                    103,
+                    592,
+                    22,
+                    20
                 ]
             }
         },
-        "pre_delay": 200,
+        "post_delay": 1000,
         "$__mpe_code": {
             "position": {
                 "x": -34,
@@ -579,7 +1159,6 @@
             }
         }
     },
-    "pre_delay": 200,
     "新建节点46": {
         "$__mpe_code": {
             "position": {
@@ -597,7 +1176,6 @@
                 ]
             }
         },
-        "pre_delay": 200,
         "action": {
             "type": "Click",
             "param": {}
@@ -621,7 +1199,6 @@
             }
         }
     },
-   
     "新建节点48": {
         "action": {
             "type": "Click",
@@ -656,7 +1233,6 @@
                 ]
             }
         },
-        "pre_delay": 200,
         "$__mpe_code": {
             "position": {
                 "x": -1273,
@@ -726,7 +1302,6 @@
                 "y": 489
             }
         },
-        "pre_delay": 200,
         "next": [
             "回界面"
         ]
@@ -737,6 +1312,27 @@
             "position": {
                 "x": -1416,
                 "y": -260
+            }
+        }
+    },
+    "找矿": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "大铁矿",
+                    "大砂矿"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": -5135,
+                "y": -117
             }
         }
     }
