@@ -1,7 +1,7 @@
 {
 
     "素材秘境次数购买": {
-        "enabled": true,
+        "enabled": false,
         "max_hit": 1,
         "post_delay": 500,
         "$__mpe_code": {
@@ -102,7 +102,7 @@
             }
         },
         "post_delay": 200,
-        "enabled": true,
+        "enabled": false,
         "max_hit": 1,
         "$__mpe_code": {
             "position": {
@@ -527,12 +527,7 @@
         "post_delay": 400,
         "pre_delay": 400,
         "enabled": true,
-        "$__mpe_code": {
-            "position": {
-                "x": -5478,
-                "y": -362
-            }
-        },
+
         "next": [
             "[JumpBack]找危险的魔物",
             "[JumpBack]找矿",
@@ -770,7 +765,7 @@
         ]
     },
     "领取经验球": {
-        "enabled": true,
+        "enabled": false,
         "pre_delay": 200,
         "max_hit": 1,
         "$__mpe_code": {
@@ -840,7 +835,7 @@
         ]
     },
     "领取小推车": {
-        "enabled": true,
+        "enabled": false,
         "pre_delay": 500,
         "max_hit": 1,
         "$__mpe_code": {
@@ -960,7 +955,7 @@
         ]
     },
     "升级装备": {
-        "enabled": true,
+        "enabled": false,
         "max_hit": 1,
         "$__mpe_code": {
             "position": {
@@ -974,7 +969,7 @@
         ]
     },
     "一键升级技能等级": {
-        "enabled": true,
+        "enabled": false,
         "max_hit": 1,
         "$__mpe_code": {
             "position": {
