@@ -18,13 +18,7 @@
             ]
         }
     ],
-    "agent": {
-        "child_exec": "python",
-        "child_args": [
-            "-u",
-            "./../agent/main.py"
-        ]
-    },
+
     "option": {
         "选择是否领取小推车": {
             "type": "checkbox",
@@ -105,7 +99,28 @@
                     }
                 }
             ]
+        },
+        "选择是否兑换素材": {
+            "type": "checkbox",
+            "label": "素材秘境次数购买",
+            "description": "选择是否购买素材购买几次",
+            "default_case": [
+                "购买"
+            ],
+            "cases": [
+                {
+                    "name": "购买",
+                    "label": "素材秘境次数购买",
+                    "description": "默认购买2次",
+                    "pipeline_override": {
+                        "素材秘境次数购买": {
+                            "enabled": true
+                        }
+                    }
+                }
+            ]
         }
+
     },
     "task": [
         {
@@ -174,6 +189,14 @@
             "entry": "一键升级技能等级",
             "option": [
                 "选择是否升级技能"
+            ]
+        }
+        ,
+        {
+            "name": "素材秘境次数购买",
+            "entry": "素材秘境次数购买",
+            "option": [
+                "选择是否兑换素材"
             ]
         }
     ]
